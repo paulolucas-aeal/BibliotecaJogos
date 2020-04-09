@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteGames.master.cs" Inherits="BibliotecaJogos.Site.Games.SiteGames" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/CustomStyles/LibraryStyles/custom_style.css" rel="stylesheet" />
+
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+            <a class="navbar-brand" href="/Games/GameLibraryPL/GameLibrary.aspx">Catálogo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active" id="navLinkEditPublisher" runat="server">
+                        <a class="nav-link" href="/Games/PublisherPL/EditPublisher.aspx">Editoras</a>
+                    </li>
+                    <li class="nav-item" id="navLinkEditGenre" runat="server">
+                        <a class="nav-link" href="/Games/GenrePL/EditGenre.aspx">Géneros</a>
+                    </li>
+                    <li class="nav-item" id="navLinkEditUsers" runat="server">
+                        <a class="nav-link" href="/Users/UsersPL/EditUsers.aspx">Utilizadores</a>
+                    </li>
+                </ul>
+
+                <span class="navbar-text">Bem vindo(a) <%= Session["username"].ToString() %>
+                </span>
+
+                <div style="padding-left: 1rem">
+                    <asp:Button ID="buttonLogout" Text="Logout" runat="server" OnClick="buttonLogout_Click" />
+                </div>
+            </div>
+        </nav>
+
+        <div class="jumbotron">
+            <h2>Biblioteca dos meus Jogos</h2>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - Paulo Lucas</p>
+            </footer>
+        </div>
+
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

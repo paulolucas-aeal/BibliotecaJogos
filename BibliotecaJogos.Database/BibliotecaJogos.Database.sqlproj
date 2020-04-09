@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>BibliotecaJogos.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{8e7b775b-588b-49d7-8faa-67dd62cbd6e8}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>BibliotecaJogos.Database</RootNamespace>
+    <AssemblyName>BibliotecaJogos.Database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="SProcedures" />
+    <Folder Include="SProcedures\SP_Genres" />
+    <Folder Include="SProcedures\SP_Publishers" />
+    <Folder Include="SProcedures\SP_Games" />
+    <Folder Include="SProcedures\SP_Users" />
+    <Folder Include="Tables" />
+    <Folder Include="Database" />
+    <Folder Include="SProcedures\SP_Passwords" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="SProcedures\SP_Genres\sp_GetGenres.sql" />
+    <Build Include="SProcedures\SP_Genres\sp_InsertGenre.sql" />
+    <Build Include="SProcedures\SP_Publishers\sp_GetPublishers.sql" />
+    <Build Include="SProcedures\SP_Publishers\sp_InsertPublisher.sql" />
+    <Build Include="SProcedures\SP_Genres\sp_GetGenreByID.sql" />
+    <Build Include="SProcedures\SP_Publishers\sp_GetPublisherByID.sql" />
+    <Build Include="SProcedures\SP_Genres\sp_UpdateGenreByID.sql" />
+    <Build Include="SProcedures\SP_Publishers\sp_UpdatePublisherByID.sql" />
+    <Build Include="SProcedures\SP_Games\sp_GetGames.sql" />
+    <Build Include="SProcedures\SP_Games\sp_GetGameByID.sql" />
+    <Build Include="SProcedures\SP_Games\sp_InsertGame.sql" />
+    <Build Include="SProcedures\SP_Games\sp_UpdateGameByID.sql" />
+    <Build Include="SProcedures\SP_Genres\sp_DeleteGenreByID.sql" />
+    <Build Include="SProcedures\SP_Publishers\sp_DeletePublisherByID.sql" />
+    <Build Include="SProcedures\SP_Games\sp_DeleteGameByID.sql" />
+    <Build Include="SProcedures\SP_Users\sp_InsertUser.sql" />
+    <Build Include="SProcedures\SP_Users\sp_GetUserByID.sql" />
+    <Build Include="SProcedures\SP_Users\sp_GetUsers.sql" />
+    <Build Include="SProcedures\SP_Users\sp_DeleteUserByID.sql" />
+    <Build Include="SProcedures\SP_Users\sp_UpdateUserByID.sql" />
+    <Build Include="Tables\tblGames.sql" />
+    <Build Include="Tables\tblGenres.sql" />
+    <Build Include="Tables\tblPublishers.sql" />
+    <Build Include="Tables\tblUsers.sql" />
+    <Build Include="SProcedures\SP_Users\sp_AuthenticateUser.sql" />
+    <Build Include="Tables\tblNewPwdRequests.sql" />
+    <Build Include="SProcedures\SP_Passwords\sp_InsertPwdRequest.sql" />
+    <Build Include="SProcedures\SP_Passwords\sp_ResetPassword.sql" />
+    <Build Include="SProcedures\SP_Passwords\sp_GetPwdRequestDataByGUID.sql" />
+    <Build Include="SProcedures\SP_Users\sp_GetUserByEmail.sql" />
+    <Build Include="SProcedures\SP_Passwords\sp_DeletePwdRequestByEmail.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="BibliotecaJogos.Database.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BibliotecaJogos.Database.publish.xml" />
+    <None Include="Database\GameLibraryDB_Primary.ldf" />
+    <None Include="Database\GameLibraryDB_Primary.mdf" />
+  </ItemGroup>
+</Project>

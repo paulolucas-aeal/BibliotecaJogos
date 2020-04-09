@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="3a137c65-dba8-4912-a452-5bb51c35ed03" ChangeDateTime="10/24/2019 15:46:33">
+    <Property Name="ElementName" Value="[dbo].[tblUsers].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblUsers]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id_user" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8ee3bfa7-3dd8-4836-b88e-2449b0886fc7" ChangeDateTime="10/24/2019 15:58:06">
+    <Property Name="ElementName" Value="[dbo].[tblPublishers].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblPublishers]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id_publisher" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2886528c-68cb-44c4-ae3d-c559a0d7f1bd" ChangeDateTime="10/24/2019 16:01:28">
+    <Property Name="ElementName" Value="[dbo].[Genre].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Genre]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id_genre" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="09b9d13e-a991-447b-9b39-5286cfa9257f" ChangeDateTime="10/24/2019 16:04:40">
+    <Property Name="ElementName" Value="[dbo].[tblGenres].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblGenres]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id_genre" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="76f4c2db-978c-4b6b-a3d4-05a260b7eb63" ChangeDateTime="10/24/2019 16:11:01">
+    <Property Name="ElementName" Value="[dbo].[tblGames].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblGames]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id_game" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6fc2a10c-5ddc-4c2b-9a9a-7168a46f8d57" ChangeDateTime="11/17/2019 20:34:51">
+    <Property Name="ElementName" Value="[dbo].[tblUsers].[retry_attempts]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblUsers]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="nr_attempts" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a8640358-8503-4c3f-a206-4c8733e990ca" ChangeDateTime="11/17/2019 20:41:14">
+    <Property Name="ElementName" Value="[dbo].[tblUsers].[nr_attempts]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblUsers]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="attempts" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="cf10ba31-6b1a-40ca-8220-6da8c9edc90e" ChangeDateTime="11/17/2019 20:41:53">
+    <Property Name="ElementName" Value="[dbo].[tblUsers].[attempts]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblUsers]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="nr_attempts" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b5a6bd7a-b549-47b0-b558-438a58cd2708" ChangeDateTime="11/17/2019 20:56:12">
+    <Property Name="ElementName" Value="[dbo].[tblUsers].[number_attempts]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblUsers]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="nr_attempts" />
+  </Operation>
+</Operations>
