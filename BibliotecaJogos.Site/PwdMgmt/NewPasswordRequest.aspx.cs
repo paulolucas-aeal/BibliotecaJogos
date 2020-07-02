@@ -70,7 +70,7 @@ namespace BibliotecaJogos.Site.PwdMgmt
             SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);
             
             smtpClient.EnableSsl = true;
-            smtpClient.Credentials = new System.Net.NetworkCredential("alexlucax@gmail.com", "Rdpa!aejr17");
+            smtpClient.Credentials = new System.Net.NetworkCredential("alexlucax@gmail.com", "xxxxxxxxxxxxx");
             smtpClient.Send(mailMessage);
         }
 
